@@ -1,0 +1,24 @@
+# Local credentials and settings
+sword_runner/config/.env
+sword_runner/config/user_settings.json
+sword_runner/config/projects/
+
+# Runtime state and production data
+__pycache__/
+*.py[cod]
+*.log
+logs/
+run/
+tts/
+video_output/
+visual_planning/
+visual_groups/
+images/
+windows_jobs/
+temp_clips/
+
+# Local editors and operating system files
+.idea/
+.vscode/
+Thumbs.db
+Desktop.ini

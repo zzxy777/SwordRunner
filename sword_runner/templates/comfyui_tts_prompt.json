@@ -1,0 +1,1097 @@
+{
+  "client_id": "sword_runner_public",
+  "prompt": {
+    "16": {
+      "inputs": {
+        "text": "世道再乱，也总得有人把道理讲清楚。",
+        "voice_instruction": "Configure locally",
+        "language": "Chinese",
+        "output_mode": "Concatenate (Merge)",
+        "seed": 714846751152623,
+        "max_new_tokens": 384,
+        "temperature": 1,
+        "top_p": 1,
+        "top_k": 1,
+        "repetition_penalty": 1.1,
+        "subtalker_temperature": 1,
+        "subtalker_top_p": 1,
+        "subtalker_top_k": 1,
+        "model_obj": [
+          "40",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceDesign",
+      "_meta": {
+        "title": "Qwen3TTSVoiceDesign"
+      }
+    },
+    "17": {
+      "inputs": {
+        "text": "有话就直说，别跟我在这儿兜圈子。",
+        "voice_instruction": "Configure locally",
+        "language": "Chinese",
+        "output_mode": "Concatenate (Merge)",
+        "seed": 445378105472335,
+        "max_new_tokens": 384,
+        "temperature": 1,
+        "top_p": 1,
+        "top_k": 1,
+        "repetition_penalty": 1.1,
+        "subtalker_temperature": 1,
+        "subtalker_top_p": 1,
+        "subtalker_top_k": 1,
+        "model_obj": [
+          "40",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceDesign",
+      "_meta": {
+        "title": "Qwen3TTSVoiceDesign"
+      }
+    },
+    "18": {
+      "inputs": {
+        "text": "退后，这件事还轮不到你插手。",
+        "voice_instruction": "Configure locally",
+        "language": "Chinese",
+        "output_mode": "Concatenate (Merge)",
+        "seed": 1022577232132405,
+        "max_new_tokens": 384,
+        "temperature": 1,
+        "top_p": 1,
+        "top_k": 1,
+        "repetition_penalty": 1.1,
+        "subtalker_temperature": 1,
+        "subtalker_top_p": 1,
+        "subtalker_top_k": 1,
+        "model_obj": [
+          "40",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceDesign",
+      "_meta": {
+        "title": "Qwen3TTSVoiceDesign"
+      }
+    },
+    "19": {
+      "inputs": {
+        "text": "你走到这一步，就该明白已经没有退路了。",
+        "voice_instruction": "Configure locally",
+        "language": "Chinese",
+        "output_mode": "Concatenate (Merge)",
+        "seed": 81977176015907,
+        "max_new_tokens": 384,
+        "temperature": 1,
+        "top_p": 1,
+        "top_k": 1,
+        "repetition_penalty": 1.1,
+        "subtalker_temperature": 1,
+        "subtalker_top_p": 1,
+        "subtalker_top_k": 1,
+        "model_obj": [
+          "40",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceDesign",
+      "_meta": {
+        "title": "Qwen3TTSVoiceDesign"
+      }
+    },
+    "20": {
+      "inputs": {
+        "text": "今晚这条街，我说了算，谁不服就站出来。",
+        "voice_instruction": "Configure locally",
+        "language": "Chinese",
+        "output_mode": "Concatenate (Merge)",
+        "seed": 23364401270703,
+        "max_new_tokens": 384,
+        "temperature": 1,
+        "top_p": 1,
+        "top_k": 1,
+        "repetition_penalty": 1.1,
+        "subtalker_temperature": 1,
+        "subtalker_top_p": 1,
+        "subtalker_top_k": 1,
+        "model_obj": [
+          "40",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceDesign",
+      "_meta": {
+        "title": "Qwen3TTSVoiceDesign"
+      }
+    },
+    "21": {
+      "inputs": {
+        "text": "急什么，我最喜欢看人明知会输还不肯低头的样子。",
+        "voice_instruction": "Configure locally",
+        "language": "Chinese",
+        "output_mode": "Concatenate (Merge)",
+        "seed": 526120816959509,
+        "max_new_tokens": 384,
+        "temperature": 1,
+        "top_p": 1,
+        "top_k": 1,
+        "repetition_penalty": 1.1,
+        "subtalker_temperature": 1,
+        "subtalker_top_p": 1,
+        "subtalker_top_k": 1,
+        "model_obj": [
+          "40",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceDesign",
+      "_meta": {
+        "title": "Qwen3TTSVoiceDesign"
+      }
+    },
+    "22": {
+      "inputs": {
+        "text": "天大的事，也得先把饭吃了再说。",
+        "voice_instruction": "Configure locally",
+        "language": "Chinese",
+        "output_mode": "Concatenate (Merge)",
+        "seed": 995614028562882,
+        "max_new_tokens": 384,
+        "temperature": 1,
+        "top_p": 1,
+        "top_k": 1,
+        "repetition_penalty": 1.1,
+        "subtalker_temperature": 1,
+        "subtalker_top_p": 1,
+        "subtalker_top_k": 1,
+        "model_obj": [
+          "40",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceDesign",
+      "_meta": {
+        "title": "Qwen3TTSVoiceDesign"
+      }
+    },
+    "23": {
+      "inputs": {
+        "text": "你若累了，就歇一会儿，我可以在这里等你。",
+        "voice_instruction": "Configure locally",
+        "language": "Chinese",
+        "output_mode": "Concatenate (Merge)",
+        "seed": 358664275203922,
+        "max_new_tokens": 384,
+        "temperature": 1,
+        "top_p": 1,
+        "top_k": 1,
+        "repetition_penalty": 1.1,
+        "subtalker_temperature": 1,
+        "subtalker_top_p": 1,
+        "subtalker_top_k": 1,
+        "model_obj": [
+          "40",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceDesign",
+      "_meta": {
+        "title": "Qwen3TTSVoiceDesign"
+      }
+    },
+    "24": {
+      "inputs": {
+        "text": "别再逼我动手，你承担不起那个后果。",
+        "voice_instruction": "Configure locally",
+        "language": "Chinese",
+        "output_mode": "Concatenate (Merge)",
+        "seed": 25820560451896,
+        "max_new_tokens": 384,
+        "temperature": 1,
+        "top_p": 1,
+        "top_k": 1,
+        "repetition_penalty": 1.1,
+        "subtalker_temperature": 1,
+        "subtalker_top_p": 1,
+        "subtalker_top_k": 1,
+        "model_obj": [
+          "40",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceDesign",
+      "_meta": {
+        "title": "Qwen3TTSVoiceDesign"
+      }
+    },
+    "25": {
+      "inputs": {
+        "text": "夜路难走，听老婆子一句，别往山里去。",
+        "voice_instruction": "Configure locally",
+        "language": "Chinese",
+        "output_mode": "Concatenate (Merge)",
+        "seed": 568238910508552,
+        "max_new_tokens": 384,
+        "temperature": 1,
+        "top_p": 1,
+        "top_k": 1,
+        "repetition_penalty": 1.1,
+        "subtalker_temperature": 1,
+        "subtalker_top_p": 1,
+        "subtalker_top_k": 1,
+        "model_obj": [
+          "40",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceDesign",
+      "_meta": {
+        "title": "Qwen3TTSVoiceDesign"
+      }
+    },
+    "26": {
+      "inputs": {
+        "text": "剑可以快，心不能乱，急了就容易先输。",
+        "voice_instruction": "Configure locally",
+        "language": "Chinese",
+        "output_mode": "Concatenate (Merge)",
+        "seed": 685963973698293,
+        "max_new_tokens": 384,
+        "temperature": 1,
+        "top_p": 1,
+        "top_k": 1,
+        "repetition_penalty": 1.1,
+        "subtalker_temperature": 1,
+        "subtalker_top_p": 1,
+        "subtalker_top_k": 1,
+        "model_obj": [
+          "40",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceDesign",
+      "_meta": {
+        "title": "Qwen3TTSVoiceDesign"
+      }
+    },
+    "27": {
+      "inputs": {
+        "text": "我真的什么都没碰，是门自己开的。",
+        "voice_instruction": "Configure locally",
+        "language": "Chinese",
+        "output_mode": "Concatenate (Merge)",
+        "seed": 501099413298309,
+        "max_new_tokens": 384,
+        "temperature": 1,
+        "top_p": 1,
+        "top_k": 1,
+        "repetition_penalty": 1.1,
+        "subtalker_temperature": 1,
+        "subtalker_top_p": 1,
+        "subtalker_top_k": 1,
+        "model_obj": [
+          "40",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceDesign",
+      "_meta": {
+        "title": "Qwen3TTSVoiceDesign"
+      }
+    },
+    "28": {
+      "inputs": {
+        "text": "这朵花送你，你可不许把它弄丢哦。",
+        "voice_instruction": "Configure locally",
+        "language": "Chinese",
+        "output_mode": "Concatenate (Merge)",
+        "seed": 681800990493249,
+        "max_new_tokens": 384,
+        "temperature": 1,
+        "top_p": 1,
+        "top_k": 1,
+        "repetition_penalty": 1.1,
+        "subtalker_temperature": 1,
+        "subtalker_top_p": 1,
+        "subtalker_top_k": 1,
+        "model_obj": [
+          "40",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceDesign",
+      "_meta": {
+        "title": "Qwen3TTSVoiceDesign"
+      }
+    },
+    "29": {
+      "inputs": {
+        "text": "我只说一遍，收剑，退下，别逼我亲自动手。",
+        "voice_instruction": "Configure locally",
+        "language": "Chinese",
+        "output_mode": "Concatenate (Merge)",
+        "seed": 532311829390878,
+        "max_new_tokens": 384,
+        "temperature": 1,
+        "top_p": 1,
+        "top_k": 1,
+        "repetition_penalty": 1.1,
+        "subtalker_temperature": 1,
+        "subtalker_top_p": 1,
+        "subtalker_top_k": 1,
+        "model_obj": [
+          "40",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceDesign",
+      "_meta": {
+        "title": "Qwen3TTSVoiceDesign"
+      }
+    },
+    "30": {
+      "inputs": {
+        "text": "进门先坐，我去给你热壶酒，别在外头吹风了。",
+        "voice_instruction": "Configure locally",
+        "language": "Chinese",
+        "output_mode": "Concatenate (Merge)",
+        "seed": 775636222002907,
+        "max_new_tokens": 384,
+        "temperature": 1,
+        "top_p": 1,
+        "top_k": 1,
+        "repetition_penalty": 1.1,
+        "subtalker_temperature": 1,
+        "subtalker_top_p": 1,
+        "subtalker_top_k": 1,
+        "model_obj": [
+          "40",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceDesign",
+      "_meta": {
+        "title": "Qwen3TTSVoiceDesign"
+      }
+    },
+    "31": {
+      "inputs": {
+        "text": "奉命巡街，闲杂人等速速退开，别挡路。",
+        "voice_instruction": "Configure locally",
+        "language": "Chinese",
+        "output_mode": "Concatenate (Merge)",
+        "seed": 401214317464603,
+        "max_new_tokens": 384,
+        "temperature": 1,
+        "top_p": 1,
+        "top_k": 1,
+        "repetition_penalty": 1.1,
+        "subtalker_temperature": 1,
+        "subtalker_top_p": 1,
+        "subtalker_top_k": 1,
+        "model_obj": [
+          "40",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceDesign",
+      "_meta": {
+        "title": "Qwen3TTSVoiceDesign"
+      }
+    },
+    "32": {
+      "inputs": {
+        "text": "我刚瞧见那人往东边去了，你现在追还来得及。",
+        "voice_instruction": "Configure locally",
+        "language": "Chinese",
+        "output_mode": "Concatenate (Merge)",
+        "seed": 557893780774751,
+        "max_new_tokens": 384,
+        "temperature": 1,
+        "top_p": 1,
+        "top_k": 1,
+        "repetition_penalty": 1.1,
+        "subtalker_temperature": 1,
+        "subtalker_top_p": 1,
+        "subtalker_top_k": 1,
+        "model_obj": [
+          "40",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceDesign",
+      "_meta": {
+        "title": "Qwen3TTSVoiceDesign"
+      }
+    },
+    "33": {
+      "inputs": {
+        "text": "我看见她刚从巷口过去，你再快些兴许还能追上。",
+        "voice_instruction": "Configure locally",
+        "language": "Chinese",
+        "output_mode": "Concatenate (Merge)",
+        "seed": 3597187582829,
+        "max_new_tokens": 384,
+        "temperature": 1,
+        "top_p": 1,
+        "top_k": 1,
+        "repetition_penalty": 1.1,
+        "subtalker_temperature": 1,
+        "subtalker_top_p": 1,
+        "subtalker_top_k": 1,
+        "model_obj": [
+          "40",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceDesign",
+      "_meta": {
+        "title": "Qwen3TTSVoiceDesign"
+      }
+    },
+    "40": {
+      "inputs": {
+        "model_repo": "Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign",
+        "download_source": "ModelScope",
+        "precision": "bf16",
+        "attn_mode": "sdpa",
+        "auto_download": true
+      },
+      "class_type": "Qwen3TTSLoader",
+      "_meta": {
+        "title": "Qwen3TTSLoader"
+      }
+    },
+    "50": {
+      "inputs": {
+        "model_repo": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "download_source": "ModelScope",
+        "precision": "bf16",
+        "attn_mode": "sdpa",
+        "auto_download": true
+      },
+      "class_type": "Qwen3TTSLoader",
+      "_meta": {
+        "title": "Qwen3TTSLoader"
+      }
+    },
+    "60": {
+      "inputs": {
+        "x_vector_only": false,
+        "ref_text": "REPLACE_WITH_LOCAL_REFERENCE_TRANSCRIPT",
+        "model_obj": [
+          "50",
+          0
+        ],
+        "ref_audio": [
+          "94",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceClonePrompt",
+      "_meta": {
+        "title": "Qwen3TTSVoiceClonePrompt"
+      }
+    },
+    "61": {
+      "inputs": {
+        "x_vector_only": false,
+        "ref_text": "REPLACE_WITH_LOCAL_REFERENCE_TRANSCRIPT",
+        "model_obj": [
+          "50",
+          0
+        ],
+        "ref_audio": [
+          "95",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceClonePrompt",
+      "_meta": {
+        "title": "Qwen3TTSVoiceClonePrompt"
+      }
+    },
+    "62": {
+      "inputs": {
+        "x_vector_only": false,
+        "ref_text": "REPLACE_WITH_LOCAL_REFERENCE_TRANSCRIPT",
+        "model_obj": [
+          "50",
+          0
+        ],
+        "ref_audio": [
+          "96",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceClonePrompt",
+      "_meta": {
+        "title": "Qwen3TTSVoiceClonePrompt"
+      }
+    },
+    "63": {
+      "inputs": {
+        "x_vector_only": false,
+        "ref_text": "REPLACE_WITH_LOCAL_REFERENCE_TRANSCRIPT",
+        "model_obj": [
+          "50",
+          0
+        ],
+        "ref_audio": [
+          "97",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceClonePrompt",
+      "_meta": {
+        "title": "Qwen3TTSVoiceClonePrompt"
+      }
+    },
+    "64": {
+      "inputs": {
+        "x_vector_only": false,
+        "ref_text": "REPLACE_WITH_LOCAL_REFERENCE_TRANSCRIPT",
+        "model_obj": [
+          "50",
+          0
+        ],
+        "ref_audio": [
+          "98",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceClonePrompt",
+      "_meta": {
+        "title": "Qwen3TTSVoiceClonePrompt"
+      }
+    },
+    "65": {
+      "inputs": {
+        "x_vector_only": false,
+        "ref_text": "REPLACE_WITH_LOCAL_REFERENCE_TRANSCRIPT",
+        "model_obj": [
+          "50",
+          0
+        ],
+        "ref_audio": [
+          "100",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceClonePrompt",
+      "_meta": {
+        "title": "Qwen3TTSVoiceClonePrompt"
+      }
+    },
+    "66": {
+      "inputs": {
+        "x_vector_only": false,
+        "ref_text": "REPLACE_WITH_LOCAL_REFERENCE_TRANSCRIPT",
+        "model_obj": [
+          "50",
+          0
+        ],
+        "ref_audio": [
+          "16",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceClonePrompt",
+      "_meta": {
+        "title": "Qwen3TTSVoiceClonePrompt"
+      }
+    },
+    "67": {
+      "inputs": {
+        "x_vector_only": false,
+        "ref_text": "REPLACE_WITH_LOCAL_REFERENCE_TRANSCRIPT",
+        "model_obj": [
+          "50",
+          0
+        ],
+        "ref_audio": [
+          "17",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceClonePrompt",
+      "_meta": {
+        "title": "Qwen3TTSVoiceClonePrompt"
+      }
+    },
+    "68": {
+      "inputs": {
+        "x_vector_only": false,
+        "ref_text": "REPLACE_WITH_LOCAL_REFERENCE_TRANSCRIPT",
+        "model_obj": [
+          "50",
+          0
+        ],
+        "ref_audio": [
+          "18",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceClonePrompt",
+      "_meta": {
+        "title": "Qwen3TTSVoiceClonePrompt"
+      }
+    },
+    "69": {
+      "inputs": {
+        "x_vector_only": false,
+        "ref_text": "REPLACE_WITH_LOCAL_REFERENCE_TRANSCRIPT",
+        "model_obj": [
+          "50",
+          0
+        ],
+        "ref_audio": [
+          "19",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceClonePrompt",
+      "_meta": {
+        "title": "Qwen3TTSVoiceClonePrompt"
+      }
+    },
+    "70": {
+      "inputs": {
+        "x_vector_only": false,
+        "ref_text": "REPLACE_WITH_LOCAL_REFERENCE_TRANSCRIPT",
+        "model_obj": [
+          "50",
+          0
+        ],
+        "ref_audio": [
+          "20",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceClonePrompt",
+      "_meta": {
+        "title": "Qwen3TTSVoiceClonePrompt"
+      }
+    },
+    "71": {
+      "inputs": {
+        "x_vector_only": false,
+        "ref_text": "REPLACE_WITH_LOCAL_REFERENCE_TRANSCRIPT",
+        "model_obj": [
+          "50",
+          0
+        ],
+        "ref_audio": [
+          "21",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceClonePrompt",
+      "_meta": {
+        "title": "Qwen3TTSVoiceClonePrompt"
+      }
+    },
+    "72": {
+      "inputs": {
+        "x_vector_only": false,
+        "ref_text": "REPLACE_WITH_LOCAL_REFERENCE_TRANSCRIPT",
+        "model_obj": [
+          "50",
+          0
+        ],
+        "ref_audio": [
+          "22",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceClonePrompt",
+      "_meta": {
+        "title": "Qwen3TTSVoiceClonePrompt"
+      }
+    },
+    "73": {
+      "inputs": {
+        "x_vector_only": false,
+        "ref_text": "REPLACE_WITH_LOCAL_REFERENCE_TRANSCRIPT",
+        "model_obj": [
+          "50",
+          0
+        ],
+        "ref_audio": [
+          "23",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceClonePrompt",
+      "_meta": {
+        "title": "Qwen3TTSVoiceClonePrompt"
+      }
+    },
+    "74": {
+      "inputs": {
+        "x_vector_only": false,
+        "ref_text": "REPLACE_WITH_LOCAL_REFERENCE_TRANSCRIPT",
+        "model_obj": [
+          "50",
+          0
+        ],
+        "ref_audio": [
+          "24",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceClonePrompt",
+      "_meta": {
+        "title": "Qwen3TTSVoiceClonePrompt"
+      }
+    },
+    "75": {
+      "inputs": {
+        "x_vector_only": false,
+        "ref_text": "REPLACE_WITH_LOCAL_REFERENCE_TRANSCRIPT",
+        "model_obj": [
+          "50",
+          0
+        ],
+        "ref_audio": [
+          "25",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceClonePrompt",
+      "_meta": {
+        "title": "Qwen3TTSVoiceClonePrompt"
+      }
+    },
+    "76": {
+      "inputs": {
+        "x_vector_only": false,
+        "ref_text": "REPLACE_WITH_LOCAL_REFERENCE_TRANSCRIPT",
+        "model_obj": [
+          "50",
+          0
+        ],
+        "ref_audio": [
+          "26",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceClonePrompt",
+      "_meta": {
+        "title": "Qwen3TTSVoiceClonePrompt"
+      }
+    },
+    "77": {
+      "inputs": {
+        "x_vector_only": false,
+        "ref_text": "REPLACE_WITH_LOCAL_REFERENCE_TRANSCRIPT",
+        "model_obj": [
+          "50",
+          0
+        ],
+        "ref_audio": [
+          "27",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceClonePrompt",
+      "_meta": {
+        "title": "Qwen3TTSVoiceClonePrompt"
+      }
+    },
+    "78": {
+      "inputs": {
+        "x_vector_only": false,
+        "ref_text": "REPLACE_WITH_LOCAL_REFERENCE_TRANSCRIPT",
+        "model_obj": [
+          "50",
+          0
+        ],
+        "ref_audio": [
+          "28",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceClonePrompt",
+      "_meta": {
+        "title": "Qwen3TTSVoiceClonePrompt"
+      }
+    },
+    "79": {
+      "inputs": {
+        "x_vector_only": false,
+        "ref_text": "REPLACE_WITH_LOCAL_REFERENCE_TRANSCRIPT",
+        "model_obj": [
+          "50",
+          0
+        ],
+        "ref_audio": [
+          "29",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceClonePrompt",
+      "_meta": {
+        "title": "Qwen3TTSVoiceClonePrompt"
+      }
+    },
+    "80": {
+      "inputs": {
+        "x_vector_only": false,
+        "ref_text": "REPLACE_WITH_LOCAL_REFERENCE_TRANSCRIPT",
+        "model_obj": [
+          "50",
+          0
+        ],
+        "ref_audio": [
+          "30",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceClonePrompt",
+      "_meta": {
+        "title": "Qwen3TTSVoiceClonePrompt"
+      }
+    },
+    "81": {
+      "inputs": {
+        "x_vector_only": false,
+        "ref_text": "REPLACE_WITH_LOCAL_REFERENCE_TRANSCRIPT",
+        "model_obj": [
+          "50",
+          0
+        ],
+        "ref_audio": [
+          "31",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceClonePrompt",
+      "_meta": {
+        "title": "Qwen3TTSVoiceClonePrompt"
+      }
+    },
+    "82": {
+      "inputs": {
+        "x_vector_only": false,
+        "ref_text": "REPLACE_WITH_LOCAL_REFERENCE_TRANSCRIPT",
+        "model_obj": [
+          "50",
+          0
+        ],
+        "ref_audio": [
+          "32",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceClonePrompt",
+      "_meta": {
+        "title": "Qwen3TTSVoiceClonePrompt"
+      }
+    },
+    "83": {
+      "inputs": {
+        "x_vector_only": false,
+        "ref_text": "REPLACE_WITH_LOCAL_REFERENCE_TRANSCRIPT",
+        "model_obj": [
+          "50",
+          0
+        ],
+        "ref_audio": [
+          "33",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSVoiceClonePrompt",
+      "_meta": {
+        "title": "Qwen3TTSVoiceClonePrompt"
+      }
+    },
+    "90": {
+      "inputs": {
+        "role_name_1": "Role 1",
+        "role_name_2": "Role 2",
+        "role_name_3": "Role 3",
+        "role_name_4": "Role 4",
+        "role_name_5": "Role 5",
+        "role_name_6": "Role 6",
+        "role_name_7": "Role 7",
+        "role_name_8": "Role 8",
+        "role_name_9": "Role 9",
+        "role_name_10": "Role 10",
+        "role_name_11": "Role 11",
+        "role_name_12": "Role 12",
+        "role_name_13": "Role 13",
+        "role_name_14": "Role 14",
+        "role_name_15": "Role 15",
+        "role_name_16": "Role 16",
+        "role_name_17": "Role 17",
+        "role_name_18": "Role 18",
+        "role_name_19": "Role 19",
+        "role_name_20": "Role 20",
+        "role_name_21": "Role 21",
+        "role_name_22": "Role 22",
+        "role_name_23": "Role 23",
+        "role_name_24": "Role 24",
+        "prompt_1": "Configure locally",
+        "prompt_2": "Configure locally",
+        "prompt_3": "Configure locally",
+        "prompt_4": "Configure locally",
+        "prompt_5": "Configure locally",
+        "prompt_6": "Configure locally",
+        "prompt_7": "Configure locally",
+        "prompt_8": "Configure locally",
+        "prompt_9": "Configure locally",
+        "prompt_10": "Configure locally",
+        "prompt_11": "Configure locally",
+        "prompt_12": "Configure locally",
+        "prompt_13": "Configure locally",
+        "prompt_14": "Configure locally",
+        "prompt_15": "Configure locally",
+        "prompt_16": "Configure locally",
+        "prompt_17": "Configure locally",
+        "prompt_18": "Configure locally",
+        "prompt_19": "Configure locally",
+        "prompt_20": "Configure locally",
+        "prompt_21": "Configure locally",
+        "prompt_22": "Configure locally",
+        "prompt_23": "Configure locally",
+        "prompt_24": "Configure locally"
+      },
+      "class_type": "Qwen3TTSRoleBank",
+      "_meta": {
+        "title": "Qwen3TTSRoleBank"
+      }
+    },
+    "91": {
+      "inputs": {
+        "script": "__FINAL_SCRIPT__",
+        "default_instruct": ""
+      },
+      "class_type": "Qwen3TTSScriptProcessor",
+      "_meta": {
+        "title": "Qwen3TTSScriptProcessor"
+      }
+    },
+    "92": {
+      "inputs": {
+        "seed": 724806850472220,
+        "trim_segment_silence": true,
+        "trim_threshold": 0.01,
+        "keep_silence_ms": 80,
+        "max_new_tokens": 384,
+        "temperature": 0.9,
+        "top_p": 1,
+        "top_k": 20,
+        "repetition_penalty": 1.1,
+        "subtalker_temperature": 0.9,
+        "subtalker_top_p": 1,
+        "subtalker_top_k": 20,
+        "model_obj": [
+          "50",
+          0
+        ],
+        "texts": [
+          "91",
+          0
+        ],
+        "instructs": [
+          "91",
+          1
+        ],
+        "roles": [
+          "91",
+          2
+        ],
+        "pauses": [
+          "91",
+          3
+        ],
+        "role_bank": [
+          "90",
+          0
+        ]
+      },
+      "class_type": "Qwen3TTSAdvancedDialogue",
+      "_meta": {
+        "title": "Qwen3TTSAdvancedDialogue"
+      }
+    },
+    "93": {
+      "inputs": {
+        "filename_prefix": "sword_runner_output",
+        "audioUI": "",
+        "audio": [
+          "92",
+          0
+        ]
+      },
+      "class_type": "SaveAudio",
+      "_meta": {
+        "title": "SaveAudio"
+      }
+    },
+    "94": {
+      "inputs": {
+        "audio": "REPLACE_WITH_LOCAL_REFERENCE_AUDIO.wav",
+        "audioUI": "REPLACE_WITH_LOCAL_REFERENCE_AUDIO.wav"
+      },
+      "class_type": "LoadAudio",
+      "_meta": {
+        "title": "LoadAudio"
+      }
+    },
+    "95": {
+      "inputs": {
+        "audio": "REPLACE_WITH_LOCAL_REFERENCE_AUDIO.wav",
+        "audioUI": "REPLACE_WITH_LOCAL_REFERENCE_AUDIO.wav"
+      },
+      "class_type": "LoadAudio",
+      "_meta": {
+        "title": "LoadAudio"
+      }
+    },
+    "96": {
+      "inputs": {
+        "audio": "REPLACE_WITH_LOCAL_REFERENCE_AUDIO.wav",
+        "audioUI": "REPLACE_WITH_LOCAL_REFERENCE_AUDIO.wav"
+      },
+      "class_type": "LoadAudio",
+      "_meta": {
+        "title": "LoadAudio"
+      }
+    },
+    "97": {
+      "inputs": {
+        "audio": "REPLACE_WITH_LOCAL_REFERENCE_AUDIO.wav",
+        "audioUI": "REPLACE_WITH_LOCAL_REFERENCE_AUDIO.wav"
+      },
+      "class_type": "LoadAudio",
+      "_meta": {
+        "title": "LoadAudio"
+      }
+    },
+    "98": {
+      "inputs": {
+        "audio": "REPLACE_WITH_LOCAL_REFERENCE_AUDIO.wav",
+        "audioUI": "REPLACE_WITH_LOCAL_REFERENCE_AUDIO.wav"
+      },
+      "class_type": "LoadAudio",
+      "_meta": {
+        "title": "LoadAudio"
+      }
+    },
+    "100": {
+      "inputs": {
+        "audio": "REPLACE_WITH_LOCAL_REFERENCE_AUDIO.wav",
+        "audioUI": "REPLACE_WITH_LOCAL_REFERENCE_AUDIO.wav"
+      },
+      "class_type": "LoadAudio",
+      "_meta": {
+        "title": "LoadAudio"
+      }
+    }
+  }
+}

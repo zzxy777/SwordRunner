@@ -7,7 +7,7 @@ Sword Audiobook Studio is a local Python production console for audiobook chapte
 - Local web UI for project settings, chapter browsing, preflight checks, single-chapter runs, queues, and logs.
 - Chapter pipeline: `chapter -> segment -> director -> voice -> tts -> post`.
 - LLM-backed segmentation and voice-script generation with configurable primary and fallback providers.
-- ComfyUI TTS workflow template with `__FINAL_SCRIPT__` as the runtime text placeholder.
+- ComfyUI TTS workflow template with `__FINAL_SCRIPT__` as the runtime text placeholder. The public sample contains no production reference audio or voice assignments.
 - Existing `shipin_5.py` and `zimu_7_text_timed.py` scripts for video and subtitle rendering.
 
 ## Requirements
@@ -35,7 +35,7 @@ MyAudiobook/
   chapter_index.json
 ```
 
-In the UI, configure LLM endpoints and keys, ComfyUI address, and any project-specific paths before production. API keys are stored locally in `sword_runner/config/.env`; that file is ignored by Git.
+In the UI, configure LLM endpoints and keys, ComfyUI address, and any project-specific paths before production. Before TTS use, replace the sample workflow's reference-audio placeholders with your own local files, then point the UI to that exported API workflow. API keys are stored locally in `sword_runner/config/.env`; that file is ignored by Git.
 
 ## Repository Layout
 

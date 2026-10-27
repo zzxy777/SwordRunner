@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sword Audiobook Studio</title>
+  <link rel="stylesheet" href="/static/app.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <aside class="sidebar">
+      <div class="brand-block">
+        <div class="brand-mark">剑</div>
+        <div>
+          <h1>Sword Studio</h1>
+          <p>本地有声小说生产台</p>
+        </div>
+      </div>
+      <nav class="side-nav" aria-label="主导航">
+        <button class="navbtn active" data-view="dashboard"><span>总览自检</span><small>启动前检查</small></button>
+        <button class="navbtn" data-view="settings"><span>项目设置</span><small>路径与参数</small></button>
+        <button class="navbtn" data-view="models"><span>模型与 ComfyUI</span><small>API 与 TTS</small></button>
+        <button class="navbtn" data-view="chapters"><span>章节库</span><small>全量检索</small></button>
+        <button class="navbtn" data-view="run"><span>生产执行</span><small>WF1-WF4</small></button>
+        <button class="navbtn" data-view="logs"><span>任务日志</span><small>卡点定位</small></button>
+      </nav>
+      <div class="side-foot">
+        <span id="globalStatus">加载中</span>
+      </div>
+    </aside>
+
+    <main class="workspace">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Local production console</p>
+          <h2 id="pageTitle">总览自检</h2>
+          <p id="pageDesc">启动前检查项目、模型、ComfyUI、脚本和素材是否到位。</p>
+        </div>
+        <div class="hero-actions">
+          <button id="preflightBtnTop">快速自检</button>
+          <button class="secondary" id="preflightLlmBtnTop">完整自检含 LLM</button>
+        </div>
+      </header>
+
+      <section class="view active" id="view-dashboard">
+        <div class="dashboard-grid">
+          <article class="summary-panel">
+            <div class="panel-title">
+              <span>Production Readiness</span>
+              <strong>生产准备度</strong>
+            </div>
+            <div class="summary-grid">
+              <div class="summary-card">
+                <b id="summaryChapters">-</b>
+                <span>章节库总数</span>
+              </div>
+              <div class="summary-card">
+                <b id="summaryLlm">未检查</b>
+                <span>LLM API</span>
+              </div>
+              <div class="summary-card">
+                <b id="summaryComfy">未检查</b>
+                <span>ComfyUI / TTS</span>
+              </div>
+              <div class="summary-card">
+                <b id="summaryScripts">未检查</b>
+                <span>视频字幕脚本</span>
+              </div>
+            </div>
+            <div class="quick-actions">
+              <button id="gotoModelsBtn">填写 LLM / ComfyUI</button>
+              <button class="secondary" id="gotoChaptersBtn">打开全量章节库</button>
+              <button class="secondary" id="gotoRunBtn">进入生产执行</button>
+            </div>
+          </article>
+
+          <article class="workflow-panel">
+            <div class="panel-title">
+              <span>WF1-WF4</span>
+              <strong>本地生产链路</strong>
+            </div>
+            <div class="wf-flow">
+              <div class="wf-step"><i>01</i><strong>取章节</strong><small>读取 book.txt 与 chapter_index.json。</small></div>
+              <div class="wf-step"><i>02</i><strong>清洗分段</strong><small>LLM 生成适合 TTS 的短段。</small></div>
+              <div class="wf-step"><i>03</i><strong>导演文件</strong><small>生成 visual_planning 与 visual_groups。</small></div>
+              <div class="wf-step"><i>04</i><strong>配音脚本</strong><small>逐场景生成 final_script。</small></div>
+              <div class="wf-step"><i>05</i><strong>TTS</strong><small>调用 ComfyUI 输出 wav/timing。</small></div>
+              <div class="wf-step"><i>06</i><strong>视频字幕</strong><small>沿用 shipin_5 与 zimu_7。</small></div>
+            </div>
+          </article>
+        </div>
+
+        <article class="card">
+          <div class="card-head">
+            <div>
+              <h3>启动前自检</h3>
+              <p>快速自检不消耗 LLM；完整自检会额外请求一次 LLM 连通性测试。</p>
+            </div>
+            <div class="button-row">
+              <button id="preflightBtn">执行快速自检</button>
+              <button class="secondary" id="preflightLlmBtn">完整自检含 LLM</button>
+            </div>
+          </div>
+          <div class="preflight-list" id="preflightList"></div>
+        </article>
+      </section>
+
+      <section class="view" id="view-settings">
+        <div class="grid">
+          <article class="card span-12">
+            <div class="card-head">
+              <div>
+                <h3>项目路径</h3>
+                <p>换小说项目时，优先改这里和章节索引。</p>
+              </div>
+              <button id="saveSettingsBtn">保存项目设置</button>
+            </div>
+            <div class="form-grid">
+              <label class="span-12">项目根目录<input id="projectRoot" autocomplete="off"></label>
+              <label class="span-6">book.txt<input id="bookPath" autocomplete="off"></label>
+              <label class="span-6">chapter_index.json<input id="chapterIndexPath" autocomplete="off"></label>
+              <label class="span-6">visual_planning<input id="visualPlanningDir" autocomplete="off"></label>
+              <label class="span-6">visual_groups<input id="visualGroupsDir" autocomplete="off"></label>
+              <label class="span-6">tts<input id="ttsDir" autocomplete="off"></label>
+              <label class="span-6">windows_jobs<input id="windowsJobsDir" autocomplete="off"></label>
+              <label class="span-6">runs/logs<input id="runsDir" autocomplete="off"></label>
+              <label class="span-6">ffmpeg<input id="ffmpegBin" autocomplete="off"></label>
+            </div>
+          </article>
+
+          <article class="card span-7">
+            <div class="card-head">
+              <div>
+                <h3>后处理脚本</h3>
+                <p>视频和字幕继续使用当前稳定脚本。</p>
+              </div>
+            </div>
+            <div class="form-grid">
+              <label class="span-12">scripts_dir<input id="scriptsDir" autocomplete="off"></label>
+              <label class="span-12">ComfyUI TTS 模板<input id="comfyTtsTemplatePath" autocomplete="off"></label>
+              <label class="span-6">视频脚本<input id="videoScript" autocomplete="off"></label>
+              <label class="span-6">字幕脚本<input id="subtitleScript" autocomplete="off"></label>
+            </div>
+          </article>
+
+          <article class="card span-5">
+            <div class="card-head">
+              <div>
+                <h3>分段与生产参数</h3>
+                <p>WF2 分段目标默认保持 80-180 字。</p>
+              </div>
+            </div>
+            <div class="form-grid">
+              <label class="span-4">最小字数<input id="segmentMin" type="number"></label>
+              <label class="span-4">目标字数<input id="segmentTarget" type="number"></label>
+              <label class="span-4">最大字数<input id="segmentMax" type="number"></label>
+              <label class="span-6">视觉组大小<input id="visualGroupSize" type="number"></label>
+              <label class="span-6">TTS 尾部静音秒<input id="ttsTail" type="number" step="0.01"></label>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="view" id="view-models">
+        <div class="grid">
+          <article class="card span-6">
+            <div class="card-head">
+              <div>
+                <h3>LLM Primary</h3>
+                <p>用于 WF2 清洗分段和 WF4 配音导演。</p>
+              </div>
+              <span class="secret-state" id="primarySecret">未配置</span>
+            </div>
+            <div class="form-grid">
+              <label class="span-12">base_url<input id="primaryBase" autocomplete="off"></label>
+              <label class="span-12">model<input id="primaryModel" autocomplete="off"></label>
+              <label class="span-6">api_key_env<input id="primaryEnv" autocomplete="off"></label>
+              <label class="span-6">timeout_s<input id="primaryTimeout" type="number"></label>
+              <label class="span-12">API Key<input id="primaryKey" type="password" placeholder="留空表示不修改"></label>
+            </div>
+            <div class="button-row">
+              <button id="saveModelsBtn">保存模型配置</button>
+              <button class="secondary" id="testPrimaryBtn">测试 Primary</button>
+            </div>
+          </article>
+
+          <article class="card span-6">
+            <div class="card-head">
+              <div>
+                <h3>LLM Fallback</h3>
+                <p>主模型失败时备用，建议保持可用。</p>
+              </div>
+              <span class="secret-state" id="fallbackSecret">未配置</span>
+            </div>
+            <div class="form-grid">
+              <label class="span-12">base_url<input id="fallbackBase" autocomplete="off"></label>
+              <label class="span-12">model<input id="fallbackModel" autocomplete="off"></label>
+              <label class="span-6">api_key_env<input id="fallbackEnv" autocomplete="off"></label>
+              <label class="span-6">timeout_s<input id="fallbackTimeout" type="number"></label>
+              <label class="span-12">API Key<input id="fallbackKey" type="password" placeholder="留空表示不修改"></label>
+            </div>
+            <div class="button-row">
+              <button class="secondary" id="testFallbackBtn">测试 Fallback</button>
+            </div>
+          </article>
+
+          <article class="card span-12">
+            <div class="card-head">
+              <div>
+                <h3>ComfyUI / TTS</h3>
+                <p>WF4 TTS 阶段会调用这里的地址。启动前先测试连通。</p>
+              </div>
+              <div class="button-row">
+                <button id="saveComfyBtn">保存 ComfyUI</button>
+                <button class="secondary" id="testComfyBtn">测试 ComfyUI</button>
+              </div>
+            </div>
+            <div class="form-grid">
+              <label class="span-6">ComfyUI base_url<input id="comfyBase" autocomplete="off"></label>
+              <label class="span-3">queue_timeout_s<input id="comfyQueue" type="number"></label>
+              <label class="span-3">history_timeout_s<input id="comfyHistory" type="number"></label>
+            </div>
+            <div class="test-result" id="testResult">等待测试。</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="view" id="view-chapters">
+        <article class="card">
+          <div class="card-head sticky-head">
+            <div>
+              <h3>全量章节库</h3>
+              <p id="chapterMeta">章节库会读取完整 chapter_index.json，不再只显示前几十章。</p>
+            </div>
+            <div class="button-row">
+              <button id="loadChaptersBtn">加载章节</button>
+              <button class="secondary" id="loadAllChaptersBtn">加载全部</button>
+            </div>
+          </div>
+          <div class="chapter-tools">
+            <label>搜索<input id="chapterSearch" placeholder="章节号 / 标题 / 关键词" autocomplete="off"></label>
+            <label>每页数量<input id="pageSize" type="number" value="200"></label>
+            <label>当前页<input id="pageNo" type="number" value="1"></label>
+            <div class="button-row">
+              <button class="secondary" id="prevPageBtn">上一页</button>
+              <button class="secondary" id="nextPageBtn">下一页</button>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>#</th><th>章节</th><th>当前产物</th><th>操作</th></tr></thead>
+              <tbody id="chapterRows"></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <section class="view" id="view-run">
+        <article class="card">
+          <div class="card-head">
+            <div>
+              <h3>WF1-WF4 执行</h3>
+              <p>先单场景真实测试，再整章生产。失败后可从 state.json 续跑。</p>
+            </div>
+            <div class="button-row">
+              <button id="startBtn">开始执行</button>
+              <button class="secondary" id="safePresetBtn">安全测试预设</button>
+              <button class="secondary" id="realPresetBtn">真实单场景预设</button>
+            </div>
+          </div>
+          <div class="form-grid">
+            <label class="span-7">章节 Hint<input id="chapterHint" placeholder="从章节库选择后自动填入" autocomplete="off"></label>
+            <label class="span-5">Run ID<input id="runId" placeholder="留空自动生成，resume 可填旧 run_id" autocomplete="off"></label>
+            <label class="span-4">模式<select id="mode"><option value="run">run 新执行</option><option value="resume">resume 续跑</option></select></label>
+            <label class="span-4">从步骤<select id="fromStep"></select></label>
+            <label class="span-4">到步骤<select id="toStep"></select></label>
+            <label class="span-6">最多场景，0 不限<input id="maxScenes" type="number" value="3"></label>
+            <label class="span-6">输出方式<select id="postMode"><option value="none">不跑后处理</option><option value="direct">直接跑视频+字幕</option><option value="job">写 windows_jobs 给 watcher</option></select></label>
+          </div>
+          <div class="toggle-row">
+            <label><input id="dryRun" type="checkbox" checked> dry-run</label>
+            <label><input id="noLlm" type="checkbox" checked> no-llm</label>
+            <label><input id="skipTts" type="checkbox" checked> skip-tts</label>
+            <label><input id="force" type="checkbox"> force 覆盖已有 TTS</label>
+          </div>
+        </article>
+
+        <article class="card queue-run-card">
+          <div class="card-head">
+            <div>
+              <h3>连续章节队列</h3>
+              <p>一章完整跑完后才进入下一章；任意章节失败会自动暂停队列，避免跳章。</p>
+            </div>
+            <div class="button-row">
+              <button id="startQueueBtn">开始队列</button>
+              <button class="secondary" id="queueProductionPresetBtn">整章生产预设</button>
+            </div>
+          </div>
+          <div class="form-grid">
+            <label class="span-4">起始章节序号<input id="queueStartIndex" type="number" placeholder="例如 805"></label>
+            <label class="span-4">结束章节序号<input id="queueEndIndex" type="number" placeholder="例如 810"></label>
+            <label class="span-4">连续数量<input id="queueCount" type="number" placeholder="填了则按起始章 + 数量计算"></label>
+          </div>
+          <div class="queue-hint" id="queueHint">队列会复用上方 WF 参数。正式生产建议：from=chapter，to=post，输出方式=直接跑视频+字幕，maxScenes=0。</div>
+        </article>
+      </section>
+
+      <section class="view" id="view-logs">
+        <article class="card log-card">
+          <div class="card-head">
+            <div>
+              <h3>任务日志</h3>
+              <p>每个任务会实时读取 stdout，并解析 runner 输出的 state.json。</p>
+            </div>
+            <div class="button-row">
+              <button class="secondary" id="refreshQueuesBtn">刷新队列</button>
+              <button class="danger" id="stopQueueBtn">停止队列</button>
+              <button class="secondary" id="refreshJobsBtn">刷新任务</button>
+              <button class="danger" id="stopBtn">停止当前任务</button>
+            </div>
+          </div>
+          <div class="queue-overview">
+            <div class="queue-list" id="queueList"></div>
+            <div class="statebox" id="queueState">暂无队列。创建连续章节队列后，这里会显示总进度和当前章节。</div>
+          </div>
+          <div class="jobs-layout">
+            <div class="job-list" id="jobList"></div>
+            <div class="log-pane">
+              <div class="statebox" id="jobState">等待执行后显示 WF 阻塞点和 state.json 路径。</div>
+              <pre id="logs">等待执行...</pre>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

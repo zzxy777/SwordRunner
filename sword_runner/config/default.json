@@ -1,0 +1,56 @@
+{
+  "project_name": "AudiobookProject",
+  "paths": {
+    "book_path": "{project_root}/book.txt",
+    "chapter_index_path": "{project_root}/chapter_index.json",
+    "scripts_dir": "{runner_root}/..",
+    "runs_dir": "{project_root}/logs/sword_runner",
+    "visual_planning_dir": "{project_root}/visual_planning",
+    "visual_groups_dir": "{project_root}/visual_groups",
+    "tts_dir": "{project_root}/tts",
+    "windows_jobs_dir": "{project_root}/windows_jobs",
+    "comfyui_tts_template_path": "{runner_root}/templates/comfyui_tts_prompt.json",
+    "ffmpeg_bin": "ffmpeg"
+  },
+  "pipeline": {
+    "use_llm_default": true,
+    "allow_rule_fallback": false,
+    "segment_min_chars": 80,
+    "segment_target_chars": 140,
+    "segment_max_chars": 180,
+    "llm_chunk_chars": 3200,
+    "visual_group_size": 5,
+    "tts_tail_silence_sec": 0.08,
+    "max_scene_tts_seconds": 120
+  },
+  "llm": {
+    "primary": {
+      "name": "deepseek-primary",
+      "base_url": "",
+      "model": "DeepSeek-V4-Flash",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "timeout_s": 60,
+      "temperature": 0.1
+    },
+    "fallback": {
+      "name": "gemini-fallback",
+      "base_url": "",
+      "model": "gemini-2.5-flash",
+      "api_key_env": "GEMINI_API_KEY",
+      "timeout_s": 60,
+      "temperature": 0.1
+    }
+  },
+  "comfyui": {
+    "base_url": "http://127.0.0.1:8188",
+    "client_id_prefix": "sword_runner",
+    "queue_timeout_s": 30,
+    "history_timeout_s": 900,
+    "poll_interval_s": 3
+  },
+  "post": {
+    "video_script": "shipin_5.py",
+    "subtitle_script": "zimu_7_text_timed.py",
+    "callback_url": ""
+  }
+}
